@@ -22,7 +22,7 @@ public class Immutables {
     return builder.build();
   }
 
-  public static <T> ImmutableList<T> copyOf(Set<T> set) {
+  public static <T> ImmutableList<T> sortedOf(Set<T> set) {
     return set.stream().sorted().collect(Collectors2.toImmutableList());
   }
 }

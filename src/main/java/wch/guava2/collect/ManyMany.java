@@ -5,6 +5,7 @@ import static com.google.common.base.Preconditions.*;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.SetMultimap;
+import com.google.common.collect.Sets;
 
 import java.util.Collections;
 import java.util.Set;
@@ -65,6 +66,10 @@ public class ManyMany<K> {
 
   public Set<K> getKeySet() {
     return ImmutableSet.copyOf(out.keySet());
+  }
+
+  public Set<K> getSink() {
+    return Sets.difference(in.keySet(), out.keySet());
   }
 
   public static class InAndOut<K> {
