@@ -41,7 +41,7 @@ public class Timer {
     stopwatch.stop();
   }
 
-  public float getFloatTime() {
+  public long getMsTime() {
     return stopwatch.elapsed(TimeUnit.MILLISECONDS);
   }
 }
